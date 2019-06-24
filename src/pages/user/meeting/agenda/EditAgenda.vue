@@ -20,6 +20,7 @@
             size="600px"
           />
           <div class="row float-right q-gutter-md">
+            <q-btn label="DELETE" class="col q-px-xl text-white bg-red"/>
             <q-btn label="CANCEL" to="/user/meetings/id/" class="col q-px-xl text-black bg-yellow"/>
             <q-btn label="SAVE" class="col q-px-xl text-white bg-primary" type="submit"/>
           </div>

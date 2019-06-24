@@ -34,7 +34,7 @@
             </template>
           </q-input>
           <div class="row float-right q-gutter-md">
-            <q-btn label="CANCEL" to="/user/meeting" class="q-px-xl bg-yellow text-black"/>
+            <q-btn label="CANCEL" to="/user/meetings/id" class="q-px-xl bg-yellow text-black"/>
             <q-btn label="ADD" class="q-px-xl bg-primary text-white" type="submit"/>
           </div>
         </div>

@@ -29,7 +29,7 @@
             </q-item>
 
             <!-- Meetings -->
-            <q-item clickable v-ripple to="/user/meeting/" exact>
+            <q-item clickable v-ripple to="/user/meetings/" exact>
               <q-item-section avatar>
                 <q-icon name="list" />
               </q-item-section>
@@ -106,7 +106,7 @@ export default {
   font-size:18px;
 }
 .q-field__label{
-  font-size:22px;
+  font-size:18px;
   padding-bottom:50px;
 }
 .bottom-text{

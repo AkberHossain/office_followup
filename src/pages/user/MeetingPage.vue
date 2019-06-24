@@ -1,43 +1,97 @@
 <template>
-  <q-page>
-    <!-- content -->
-    <div>
+ <q-page>
+    <div style="max-width: 750px ;" >
+      <q-toolbar class="bg-grey-4 text-black">
+        <q-toolbar-title>This Week</q-toolbar-title>
+      </q-toolbar>
 
-      <q-tabs
-        align="left"
-        class="text-grey-6 q-pt-md shadow-2"
-        v-model="selectedTab"
-      >
-        <q-route-tab to="/user/meeting/" class="q-px-xl" name="agenda" label="AGENDA" />
-        <q-route-tab to="/user/meeting/attendees" name="attendees" class="q-px-xl" label="ATTENDEES" />
-        <q-route-tab to="/user/meeting/summary" name="summary" class="q-px-xl" label="SUMMARY" />
-      </q-tabs>
+      <q-list bordered separator>
+        <q-item to="/user/meetings/id"  clickable v-ripple class="q-pa-lg">
+
+          <q-item-section>
+            <q-item-label class="text-weight-bold">
+              Review Meeting
+            </q-item-label>
+            <q-item-label caption lines="1">
+              Monday at 4:00 PM – 5:00 PM
+            </q-item-label>
+          </q-item-section>
+
+        </q-item>
+        <q-item to="/user/meetings/id"  clickable v-ripple class="q-pa-lg">
+
+          <q-item-section>
+            <q-item-label class="text-weight-bold">
+              Sabeena Faizun
+            </q-item-label>
+            <q-item-label caption lines="1">
+              Tuesday at 4:00 PM – 5:00 PM
+            </q-item-label>
+          </q-item-section>
+
+        </q-item>
+      </q-list>
+
+      <q-toolbar class="bg-grey-4 text-black">
+        <q-toolbar-title>Next Week</q-toolbar-title>
+      </q-toolbar>
+
+      <q-list bordered separator>
+        <q-item  to="/user/meetings/id" clickable v-ripple class="q-pa-lg">
+
+          <q-item-section>
+            <q-item-label class="text-weight-bold">
+              Review Meeting
+            </q-item-label>
+            <q-item-label caption lines="1">
+              Monday at 4:00 PM – 5:00 PM
+            </q-item-label>
+          </q-item-section>
+
+        </q-item>
+        <q-item to="/user/meetings/id"  clickable v-ripple class="q-pa-lg">
+
+          <q-item-section>
+            <q-item-label class="text-weight-bold">
+              Sabeena Faizun
+            </q-item-label>
+            <q-item-label caption lines="1">
+              Tuesday at 4:00 PM – 5:00 PM
+            </q-item-label>
+          </q-item-section>
+        </q-item>
+      </q-list>
+      <q-toolbar class="bg-grey-4 text-black">
+        <q-toolbar-title>Beyond This Week</q-toolbar-title>
+      </q-toolbar>
+
+      <q-list bordered separator>
+        <q-item  to="/user/meetings/id" clickable v-ripple class="q-pa-lg">
+
+          <q-item-section>
+            <q-item-label class="text-weight-bold">
+              Review Meeting
+            </q-item-label>
+            <q-item-label caption lines="1">
+              Monday at 4:00 PM – 5:00 PM
+            </q-item-label>
+          </q-item-section>
+
+        </q-item>
+      </q-list>
 
     </div>
-
-    <div>
-      <router-view></router-view>
-    </div>
-
+    <q-page-sticky position="bottom" :offset="[48, 28]">
+          <q-btn to="/user/meetings/id/summary" fab icon="add" color="primary" />
+        </q-page-sticky>
   </q-page>
 </template>
 
 <script>
 export default {
-  name: 'MeetingPage',
-  data () {
-    return {
-      selectedTab: 'agenda'
-    }
-  }
+  name: 'DashBoard'
 }
 </script>
 
-<style scoped>
-.q-tab__label{
-  font-size:22px;
-}
-.q-tab--active{
-  color:black !important;
-}
+<style>
 </style>

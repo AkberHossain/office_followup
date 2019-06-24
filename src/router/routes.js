@@ -15,10 +15,6 @@ const routes = [
       {
         path: '/verification',
         component: () => import('pages/Verification.vue')
-      },
-      {
-        path: '/test',
-        component: () => import('pages/test.vue')
       }
     ]
   },
@@ -31,8 +27,12 @@ const routes = [
         component: () => import('pages/user/DashBoard.vue')
       },
       {
-        path: 'meeting',
-        component: () => import('pages/user/MeetingPage.vue'),
+        path: 'meetings',
+        component: () => import('pages/user/MeetingPage.vue')
+      },
+      {
+        path: 'meetings/id',
+        component: () => import('pages/user/MeetingMenu.vue'),
         children: [
           {
             path: '',
@@ -57,6 +57,10 @@ const routes = [
           {
             path: 'addattendee',
             component: () => import('pages/user/meeting/attendee/AddAttendee.vue')
+          },
+          {
+            path: 'editagenda/id',
+            component: () => import('pages/user/meeting/agenda/EditAgenda.vue')
           }
         ]
       },
