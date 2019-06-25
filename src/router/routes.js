@@ -45,23 +45,23 @@ const routes = [
           {
             path: 'summary',
             component: () => import('pages/user/meeting/SummaryPage.vue')
-          },
-          {
-            path: 'addtask',
-            component: () => import('pages/user/meeting/agenda/AddTask.vue')
-          },
-          {
-            path: 'addagenda',
-            component: () => import('pages/user/meeting/agenda/AddAgenda.vue')
-          },
-          {
-            path: 'addattendee',
-            component: () => import('pages/user/meeting/attendee/AddAttendee.vue')
-          },
-          {
-            path: 'editagenda/id',
-            component: () => import('pages/user/meeting/agenda/EditAgenda.vue')
           }
+          // {
+          //   path: 'addtask',
+          //   component: () => import('pages/user/meeting/agenda/AddTask.vue')
+          // },
+          // {
+          //   path: 'addagenda',
+          //   component: () => import('pages/user/meeting/agenda/AddAgenda.vue')
+          // },
+          // {
+          //   path: 'addattendee',
+          //   component: () => import('pages/user/meeting/attendee/AddAttendee.vue')
+          // }
+          // {
+          //   path: 'editagenda/id',
+          //   component: () => import('pages/user/meeting/agenda/EditAgenda.vue')
+          // }
         ]
       },
       {

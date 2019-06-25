@@ -57,17 +57,28 @@
           </q-item-section>
         </q-item>
         <q-page-sticky class="float-right" position="absolute-bottom" :offset="[18, 28]">
-            <q-btn to="/user/meetings/id/addattendee" fab icon="add" color="primary" />
+            <q-btn @click="addAttendee_popup = true" fab icon="add" color="primary" />
           </q-page-sticky>
       </q-list>
+
+      <q-dialog v-model="addAttendee_popup">
+        <AddAttendee @formSubmit=" newAttendee => addAttendee_popup = false "/>
+      </q-dialog>
     </div>
 
   </q-page>
 </template>
 
 <script>
+import AddAttendee from './components/AddAttendee.vue'
 export default {
   // name: 'PageName',
+  components: { AddAttendee },
+  data () {
+    return {
+      addAttendee_popup: false
+    }
+  }
 }
 </script>
 
